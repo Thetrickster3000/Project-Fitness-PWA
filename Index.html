@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Overload — Evidence-Based Training</title>
+  <meta name="description" content="Rule-based hypertrophy and sprint-power programming. Works offline in the gym." />
+  <meta name="theme-color" content="#101315" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ======================= SETUP ======================= -->
+  <section id="setup" class="screen" hidden>
+    <header class="setup-head">
+      <div class="wordmark">OVER<span>LOAD</span></div>
+      <p class="tagline">Evidence-based programming. Two pathways, zero guesswork.</p>
+    </header>
+
+    <form id="setup-form" autocomplete="off">
+      <div class="field">
+        <label class="field-label" for="bodyweight">Body weight</label>
+        <div class="weight-input">
+          <input id="bodyweight" type="number" inputmode="decimal" min="35" max="250" step="0.5" required placeholder="82.5" />
+          <span class="unit">kg</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Training days per week</span>
+        <div class="seg" id="days-seg" role="radiogroup" aria-label="Training days per week">
+          <button type="button" data-days="2">2</button>
+          <button type="button" data-days="3">3</button>
+          <button type="button" data-days="4" class="active">4</button>
+          <button type="button" data-days="5">5</button>
+          <button type="button" data-days="6">6</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Training mode</span>
+        <div class="mode-cards" id="mode-cards">
+          <button type="button" class="mode-card active" data-mode="hypertrophy">
+            <span class="mode-plates"><i class="plate p-heavy"></i><i class="plate p-mod"></i><i class="plate p-meta"></i></span>
+            <span class="mode-name">Hypertrophy</span>
+            <span class="mode-sub">DUP rotation · sets to failure · 60&thinsp;s rests</span>
+          </button>
+          <button type="button" class="mode-card" data-mode="sprint">
+            <span class="mode-plates"><i class="plate p-sprint"></i></span>
+            <span class="mode-name">Sprint / Power</span>
+            <span class="mode-sub">Max strength &amp; plyos · 2–3 RIR · full recovery</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="field" id="phase-field">
+        <span class="field-label">Dietary phase</span>
+        <div class="seg seg-2" id="phase-seg" role="radiogroup" aria-label="Dietary phase">
+          <button type="button" data-phase="bulk" class="active">Bulking <small>full volume</small></button>
+          <button type="button" data-phase="cut">Cutting <small>−25% volume</small></button>
+        </div>
+      </div>
+
+      <button type="submit" class="cta">Build my week</button>
+    </form>
+  </section>
+
+  <!-- ===================== DASHBOARD ===================== -->
+  <section id="dashboard" class="screen" hidden>
+    <header class="dash-head">
+      <div class="wordmark sm">OVER<span>LOAD</span></div>
+      <div class="dash-meta">
+        <span id="meso-status">Meso week 1</span>
+        <button id="edit-profile" class="ghost" type="button">Profile</button>
+      </div>
+    </header>
+
+    <div id="deload-banner" class="deload" hidden>
+      <strong>Deload week</strong>
+      <p id="deload-note"></p>
+      <button id="new-meso" class="cta slim" type="button">Start next mesocycle</button>
+    </div>
+
+    <nav class="day-tabs" id="day-tabs" aria-label="Training days"></nav>
+
+    <div id="workout-list" class="workout-list"></div>
+
+    <details class="nutrition" id="nutrition-card">
+      <summary>Nutrition targets</summary>
+      <div id="nutrition-body"></div>
+    </details>
+
+    <div class="dash-actions">
+      <button id="regen-week" class="ghost" type="button">Regenerate week (new exercise rotation)</button>
+    </div>
+  </section>
+
+  <!-- ===================== REST TIMER ===================== -->
+  <div id="rest-bar" class="rest-bar" hidden>
+    <div class="rest-fill" id="rest-fill"></div>
+    <div class="rest-content">
+      <span class="rest-label">REST</span>
+      <span class="rest-time" id="rest-time">1:00</span>
+      <span class="rest-next" id="rest-next"></span>
+      <button id="rest-skip" type="button">Skip</button>
+    </div>
+  </div>
+
+  <noscript><p style="padding:2rem;font-family:sans-serif">Overload needs JavaScript to generate your plan.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

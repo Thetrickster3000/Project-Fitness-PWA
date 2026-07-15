@@ -1,0 +1,5869 @@
+[
+  {
+    "id": "pendulum_squat",
+    "name": "Pendulum Squat",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes",
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 10,
+      "maxStrength": 6,
+      "rfdPower": 1,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hack_squat",
+    "name": "Hack Squat",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes",
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "back_squat",
+    "name": "Barbell Back Squat",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [
+        "adductors",
+        "lower_back_erectors"
+      ],
+      "stabilizers": [
+        "abs"
+      ]
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 10,
+      "rfdPower": 6,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 5,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "front_squat",
+    "name": "Barbell Front Squat",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes",
+        "abs"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 9,
+      "rfdPower": 5,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "leg_press_45",
+    "name": "45° Leg Press",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes",
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "smith_squat",
+    "name": "Smith Machine Squat",
+    "equipmentClass": "smith",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "belt_squat",
+    "name": "Belt Squat",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes",
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "single_leg_press",
+    "name": "Single-Leg Press",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "squat",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "leg_extension",
+    "name": "Leg Extension",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "knee_extension_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "sissy_squat_machine",
+    "name": "Sissy Squat (Machine)",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "knee_extension_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "descending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "reverse_nordic",
+    "name": "Reverse Nordic Curl",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "knee_extension_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "eccentric_overload",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps"
+      ],
+      "secondary": [
+        "hip_flexors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "4-0-X-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": "hip_flexors"
+    }
+  },
+  {
+    "id": "bulgarian_split_squat",
+    "name": "Bulgarian Split Squat",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "lunge_split",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 7,
+      "rfdPower": 3,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "walking_lunge",
+    "name": "DB Walking Lunge",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "lunge_split",
+      "mechanics": "compound",
+      "laterality": "alternating",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [
+        "hamstrings"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 5,
+      "rfdPower": 3,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "smith_split_squat",
+    "name": "Smith Split Squat",
+    "equipmentClass": "smith",
+    "movement": {
+      "pattern": "lunge_split",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [
+        "adductors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 2,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "db_step_up",
+    "name": "DB Step-Up (High Box)",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "lunge_split",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 6,
+      "maxStrength": 6,
+      "rfdPower": 5,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "conventional_deadlift",
+    "name": "Conventional Deadlift",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings",
+        "glutes"
+      ],
+      "secondary": [
+        "lower_back_erectors",
+        "traps",
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 10,
+      "rfdPower": 6,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 5,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "trap_bar_deadlift",
+    "name": "Trap Bar Deadlift",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "quadriceps"
+      ],
+      "secondary": [
+        "hamstrings",
+        "traps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 10,
+      "rfdPower": 7,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "romanian_deadlift",
+    "name": "Romanian Deadlift",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings",
+        "glutes"
+      ],
+      "secondary": [
+        "lower_back_erectors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 8,
+      "rfdPower": 3,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "stiff_leg_deadlift",
+    "name": "Stiff-Leg Deadlift",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings"
+      ],
+      "secondary": [
+        "glutes",
+        "lower_back_erectors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "good_morning",
+    "name": "Barbell Good Morning",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings",
+        "lower_back_erectors"
+      ],
+      "secondary": [
+        "glutes"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 6,
+      "rfdPower": 2,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "seated_leg_curl",
+    "name": "Seated Leg Curl",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "knee_flexion_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 10,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "lying_leg_curl",
+    "name": "Lying Leg Curl",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "knee_flexion_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "nordic_ham_curl",
+    "name": "Nordic Hamstring Curl",
+    "equipmentClass": "specialty",
+    "movement": {
+      "pattern": "knee_flexion_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "eccentric_overload",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 5,
+      "rfdPower": 2,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "4-0-X-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": "hamstrings"
+    }
+  },
+  {
+    "id": "glute_ham_raise",
+    "name": "Glute-Ham Raise",
+    "equipmentClass": "specialty",
+    "movement": {
+      "pattern": "knee_flexion_iso",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "eccentric_overload",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings",
+        "glutes"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 5,
+      "rfdPower": 2,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "4-0-X-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": "hamstrings"
+    }
+  },
+  {
+    "id": "back_extension_45",
+    "name": "45° Back Extension",
+    "equipmentClass": "specialty",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "hamstrings"
+      ],
+      "secondary": [
+        "lower_back_erectors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_hip_thrust",
+    "name": "Barbell Hip Thrust",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "descending",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [
+        "hamstrings",
+        "quadriceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 8,
+      "rfdPower": 4,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 1,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hip_thrust_machine",
+    "name": "Hip Thrust Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "descending",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [
+        "hamstrings"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 3,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "sumo_deadlift",
+    "name": "Sumo Deadlift",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "adductors"
+      ],
+      "secondary": [
+        "hamstrings",
+        "quadriceps",
+        "traps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 10,
+      "rfdPower": 5,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 5,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_pull_through",
+    "name": "Cable Pull-Through",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [
+        "hamstrings"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_kickback",
+    "name": "Cable Glute Kickback",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hip_abduction_machine",
+    "name": "Hip Abduction Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "hip_abduction",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_hip_abduction",
+    "name": "Cable Hip Abduction",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "hip_abduction",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "glutes"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 6,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hip_adduction_machine",
+    "name": "Hip Adduction Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "hip_adduction",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "adductors"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "copenhagen_plank",
+    "name": "Copenhagen Plank",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "hip_adduction",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "isometric",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "adductors"
+      ],
+      "secondary": [
+        "obliques"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 5,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": "adductors"
+    }
+  },
+  {
+    "id": "standing_calf_raise",
+    "name": "Standing Calf Raise Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "calf_raise",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "calves"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 6,
+      "rfdPower": 3,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "3-1-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "seated_calf_raise",
+    "name": "Seated Calf Raise",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "calf_raise",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "calves"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "3-1-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "leg_press_calf_raise",
+    "name": "Leg Press Calf Raise",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "calf_raise",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "calves"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 2,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "3-1-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "smith_calf_raise",
+    "name": "Smith Standing Calf Raise",
+    "equipmentClass": "smith",
+    "movement": {
+      "pattern": "calf_raise",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "calves"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 3,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "3-1-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_bench_press",
+    "name": "Barbell Bench Press",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [
+        "triceps",
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 10,
+      "rfdPower": 5,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "incline_barbell_bench",
+    "name": "Incline Barbell Bench Press",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest",
+        "front_delts"
+      ],
+      "secondary": [
+        "triceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 9,
+      "rfdPower": 4,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "flat_db_press",
+    "name": "Flat DB Press",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [
+        "triceps",
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 8,
+      "rfdPower": 3,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "incline_db_press",
+    "name": "Incline DB Press",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest",
+        "front_delts"
+      ],
+      "secondary": [
+        "triceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 3,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "converging_chest_press",
+    "name": "Converging Chest Press Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [
+        "triceps",
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "incline_smith_press",
+    "name": "Incline Smith Press",
+    "equipmentClass": "smith",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest",
+        "front_delts"
+      ],
+      "secondary": [
+        "triceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 8,
+      "rfdPower": 2,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "pec_deck",
+    "name": "Pec Deck Fly",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_fly_low_to_high",
+    "name": "Low-to-High Cable Fly",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_fly_mid",
+    "name": "Mid Cable Fly",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "weighted_dip",
+    "name": "Weighted Dip",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "chest",
+        "triceps"
+      ],
+      "secondary": [
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 8,
+      "rfdPower": 3,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_dip",
+    "name": "Machine Dip",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "triceps",
+        "chest"
+      ],
+      "secondary": [
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_ohp",
+    "name": "Barbell Overhead Press",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "front_delts"
+      ],
+      "secondary": [
+        "triceps",
+        "side_delts",
+        "upper_back"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 10,
+      "rfdPower": 4,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 3,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "seated_db_press",
+    "name": "Seated DB Shoulder Press",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "front_delts",
+        "side_delts"
+      ],
+      "secondary": [
+        "triceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_shoulder_press",
+    "name": "Machine Shoulder Press",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "front_delts",
+        "side_delts"
+      ],
+      "secondary": [
+        "triceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "db_lateral_raise",
+    "name": "DB Lateral Raise",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "descending",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "side_delts"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_lateral_raise",
+    "name": "Behind-Back Cable Lateral Raise",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "side_delts"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_lateral_raise",
+    "name": "Machine Lateral Raise",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "vertical_push",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "side_delts"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "reverse_pec_deck",
+    "name": "Reverse Pec Deck",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "rear_delts"
+      ],
+      "secondary": [
+        "upper_back"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_rear_delt_fly",
+    "name": "Cross-Body Cable Rear Delt Fly",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "rear_delts"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "face_pull",
+    "name": "Rope Face Pull",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "rear_delts",
+        "upper_back"
+      ],
+      "secondary": [
+        "traps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "weighted_pull_up",
+    "name": "Weighted Pull-Up",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats"
+      ],
+      "secondary": [
+        "biceps",
+        "upper_back",
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 9,
+      "rfdPower": 3,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "lat_pulldown",
+    "name": "Lat Pulldown",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats"
+      ],
+      "secondary": [
+        "biceps",
+        "upper_back"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 6,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "single_arm_pulldown",
+    "name": "Single-Arm Kneeling Pulldown",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats"
+      ],
+      "secondary": [
+        "biceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 5,
+      "rfdPower": 1,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_pullover",
+    "name": "Pullover Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats"
+      ],
+      "secondary": [
+        "triceps",
+        "chest"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_row",
+    "name": "Barbell Row",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "upper_back",
+        "lats"
+      ],
+      "secondary": [
+        "rear_delts",
+        "biceps",
+        "lower_back_erectors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 9,
+      "rfdPower": 3,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 3,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "chest_supported_tbar_row",
+    "name": "Chest-Supported T-Bar Row",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "upper_back",
+        "lats"
+      ],
+      "secondary": [
+        "rear_delts",
+        "biceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "seal_row",
+    "name": "Barbell Seal Row",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "upper_back",
+        "lats"
+      ],
+      "secondary": [
+        "rear_delts",
+        "biceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "prime_plate_loaded_row",
+    "name": "Prime Plate-Loaded Row",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "ascending",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats",
+        "upper_back"
+      ],
+      "secondary": [
+        "biceps",
+        "rear_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 10,
+      "maxStrength": 7,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "seated_cable_row",
+    "name": "Seated Cable Row",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "upper_back",
+        "lats"
+      ],
+      "secondary": [
+        "biceps",
+        "rear_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 1,
+      "cnsCost": 2,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "single_arm_db_row",
+    "name": "Single-Arm DB Row",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "horizontal_pull",
+      "mechanics": "compound",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "lats",
+        "upper_back"
+      ],
+      "secondary": [
+        "biceps",
+        "rear_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_shrug",
+    "name": "Barbell Shrug",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "traps"
+      ],
+      "secondary": [
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 6,
+      "rfdPower": 2,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "db_shrug",
+    "name": "DB Shrug",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "vertical_pull",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "traps"
+      ],
+      "secondary": [
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 5,
+      "rfdPower": 1,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "rack_pull",
+    "name": "Rack Pull (Knee Height)",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "traps",
+        "lower_back_erectors"
+      ],
+      "secondary": [
+        "glutes",
+        "hamstrings",
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 9,
+      "rfdPower": 3,
+      "sprintTransfer": 4
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 5,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "ez_bar_curl",
+    "name": "EZ-Bar Curl",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "biceps"
+      ],
+      "secondary": [
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "cluster_set"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "incline_db_curl",
+    "name": "Incline DB Curl",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "biceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "preacher_curl_machine",
+    "name": "Preacher Curl Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "bell",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "biceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "bayesian_cable_curl",
+    "name": "Bayesian Cable Curl",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "biceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hammer_db_curl",
+    "name": "DB Hammer Curl",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "biceps",
+        "forearms"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "reverse_ez_curl",
+    "name": "Reverse EZ-Bar Curl",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "forearms"
+      ],
+      "secondary": [
+        "biceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "db_wrist_curl",
+    "name": "DB Wrist Curl",
+    "equipmentClass": "dumbbell",
+    "movement": {
+      "pattern": "elbow_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "forearms"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 2,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_pushdown",
+    "name": "Cable Pushdown (Rope)",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "elbow_extension",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "triceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "overhead_cable_extension",
+    "name": "Overhead Cable Extension",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "elbow_extension",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "triceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 9,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "ez_skullcrusher",
+    "name": "EZ-Bar Skullcrusher",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "elbow_extension",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "triceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_tricep_extension",
+    "name": "Machine Triceps Extension",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "elbow_extension",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "triceps"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 1
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials",
+      "bfr"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "close_grip_bench",
+    "name": "Close-Grip Bench Press",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "horizontal_push",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "triceps"
+      ],
+      "secondary": [
+        "chest",
+        "front_delts"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 9,
+      "rfdPower": 4,
+      "sprintTransfer": 2
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5",
+        "6-8",
+        "8-12",
+        "12-20"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 1
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "cluster_set",
+      "accentuated_eccentric"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_crunch",
+    "name": "Kneeling Cable Crunch",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "trunk_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "abs"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "machine_crunch",
+    "name": "Ab Crunch Machine",
+    "equipmentClass": "machine",
+    "movement": {
+      "pattern": "trunk_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "abs"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 8,
+      "maxStrength": 3,
+      "rfdPower": 1,
+      "sprintTransfer": 3
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hanging_leg_raise",
+    "name": "Hanging Leg Raise",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "trunk_flexion",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "abs",
+        "hip_flexors"
+      ],
+      "secondary": [
+        "obliques",
+        "forearms"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 3,
+      "rfdPower": 2,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "ab_wheel_rollout",
+    "name": "Ab Wheel Rollout",
+    "equipmentClass": "specialty",
+    "movement": {
+      "pattern": "trunk_antirotation",
+      "mechanics": "isolation",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": true
+    },
+    "muscles": {
+      "primary": [
+        "abs"
+      ],
+      "secondary": [
+        "obliques",
+        "lats"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 7,
+      "maxStrength": 4,
+      "rfdPower": 1,
+      "sprintTransfer": 5
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 1,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "pallof_press",
+    "name": "Cable Pallof Press",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "trunk_antirotation",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "isometric",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "obliques",
+        "abs"
+      ],
+      "secondary": [],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 5,
+      "maxStrength": 3,
+      "rfdPower": 2,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "cable_woodchop",
+    "name": "High-to-Low Cable Chop",
+    "equipmentClass": "cable",
+    "movement": {
+      "pattern": "trunk_antirotation",
+      "mechanics": "isolation",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "obliques"
+      ],
+      "secondary": [
+        "abs"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 6,
+      "maxStrength": 3,
+      "rfdPower": 3,
+      "sprintTransfer": 7
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8",
+        "8-12",
+        "12-20",
+        "20-30"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 60,
+        "strengthPower": 180
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "low",
+      "axialLoadCost": 0,
+      "cnsCost": 1,
+      "stableMachineBase": true
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "farmers_carry",
+    "name": "Heavy Farmer's Carry",
+    "equipmentClass": "specialty",
+    "movement": {
+      "pattern": "carry",
+      "mechanics": "compound",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "traps",
+        "forearms"
+      ],
+      "secondary": [
+        "abs",
+        "obliques"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 5,
+      "maxStrength": 7,
+      "rfdPower": 2,
+      "sprintTransfer": 6
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "6-8"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.3,
+        "maxPct1RM": 0.9
+      },
+      "defaultRestSec": {
+        "hypertrophy": 90,
+        "strengthPower": 240
+      },
+      "defaultTempo": "2-0-1-0",
+      "skillDemand": "moderate",
+      "axialLoadCost": 3,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [
+      "drop_set",
+      "cluster_set",
+      "rest_pause",
+      "lengthened_partials"
+    ],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "depth_jump",
+    "name": "Depth Jump (Drop Jump)",
+    "equipmentClass": "plyo_box",
+    "movement": {
+      "pattern": "depth_drop",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "calves",
+        "glutes"
+      ],
+      "secondary": [
+        "hamstrings"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 10,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "box_jump",
+    "name": "Box Jump",
+    "equipmentClass": "plyo_box",
+    "movement": {
+      "pattern": "jump_vertical",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "quadriceps"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 8,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 3,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hurdle_hops",
+    "name": "Continuous Hurdle Hops",
+    "equipmentClass": "plyo_box",
+    "movement": {
+      "pattern": "jump_vertical",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "calves",
+        "quadriceps"
+      ],
+      "secondary": [
+        "glutes"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 9,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "pogo_hops",
+    "name": "Pogo Hops (Stiffness)",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "jump_vertical",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "calves"
+      ],
+      "secondary": [
+        "quadriceps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 1,
+      "rfdPower": 7,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 2,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "trap_bar_jump",
+    "name": "Loaded Trap Bar Jump",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "jump_vertical",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "quadriceps"
+      ],
+      "secondary": [
+        "calves",
+        "traps"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 2,
+      "maxStrength": 4,
+      "rfdPower": 10,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 3,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "barbell_jump_squat",
+    "name": "Barbell Jump Squat (20-30% 1RM)",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "jump_vertical",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "quadriceps",
+        "glutes"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 2,
+      "maxStrength": 3,
+      "rfdPower": 9,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 3,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "broad_jump",
+    "name": "Standing Broad Jump",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "jump_horizontal",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "hamstrings"
+      ],
+      "secondary": [
+        "quadriceps",
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 9,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "alternating_bounds",
+    "name": "Alternating Bounds",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "bound",
+      "mechanics": "ballistic",
+      "laterality": "alternating",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "hamstrings"
+      ],
+      "secondary": [
+        "calves",
+        "hip_flexors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 9,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "single_leg_bound",
+    "name": "Single-Leg Bound",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "bound",
+      "mechanics": "ballistic",
+      "laterality": "unilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "hamstrings"
+      ],
+      "secondary": [
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 9,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "power_clean",
+    "name": "Power Clean",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "hamstrings",
+        "traps"
+      ],
+      "secondary": [
+        "quadriceps",
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 3,
+      "maxStrength": 6,
+      "rfdPower": 10,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 4,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "hang_power_clean",
+    "name": "Hang Power Clean",
+    "equipmentClass": "barbell",
+    "movement": {
+      "pattern": "hinge",
+      "mechanics": "ballistic",
+      "laterality": "bilateral",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "traps"
+      ],
+      "secondary": [
+        "hamstrings",
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 3,
+      "maxStrength": 5,
+      "rfdPower": 10,
+      "sprintTransfer": 9
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 3,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "sled_sprint",
+    "name": "Heavy Sled Sprint (15m)",
+    "equipmentClass": "sled",
+    "movement": {
+      "pattern": "sprint_drill",
+      "mechanics": "ballistic",
+      "laterality": "alternating",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "glutes",
+        "quadriceps"
+      ],
+      "secondary": [
+        "hamstrings",
+        "calves",
+        "hip_flexors"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 2,
+      "maxStrength": 4,
+      "rfdPower": 9,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 4,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "flying_sprint",
+    "name": "Flying Sprint (20m build + 20m fly)",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "sprint_drill",
+      "mechanics": "ballistic",
+      "laterality": "alternating",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "hamstrings",
+        "glutes"
+      ],
+      "secondary": [
+        "hip_flexors",
+        "calves"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 2,
+      "rfdPower": 10,
+      "sprintTransfer": 10
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 5,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  },
+  {
+    "id": "a_skip",
+    "name": "A-Skip Series",
+    "equipmentClass": "bodyweight",
+    "movement": {
+      "pattern": "sprint_drill",
+      "mechanics": "ballistic",
+      "laterality": "alternating",
+      "contractionEmphasis": "standard",
+      "resistanceProfile": "constant",
+      "loadedAtLongMuscleLength": false
+    },
+    "muscles": {
+      "primary": [
+        "hip_flexors"
+      ],
+      "secondary": [
+        "calves",
+        "glutes"
+      ],
+      "stabilizers": []
+    },
+    "suitability": {
+      "hypertrophy": 1,
+      "maxStrength": 1,
+      "rfdPower": 6,
+      "sprintTransfer": 8
+    },
+    "programming": {
+      "repRangeCompatibility": [
+        "1-5"
+      ],
+      "loadSpectrum": {
+        "minPct1RM": 0.2,
+        "maxPct1RM": 0.5
+      },
+      "defaultRestSec": {
+        "hypertrophy": 120,
+        "strengthPower": 300
+      },
+      "defaultTempo": "X-0-X-0",
+      "skillDemand": "high",
+      "axialLoadCost": 2,
+      "cnsCost": 1,
+      "stableMachineBase": false
+    },
+    "advancedTechniqueCompatibility": [],
+    "injuryPrevention": {
+      "fascicleLengthTarget": null
+    }
+  }
+]

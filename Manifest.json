@@ -1,0 +1,16 @@
+{
+  "name": "Overload — Evidence-Based Training",
+  "short_name": "Overload",
+  "description": "Rule-based hypertrophy and sprint-power programming. Fully offline in the gym.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#101315",
+  "theme_color": "#101315",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

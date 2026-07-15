@@ -1,0 +1,274 @@
+/* ============================================================
+   OVERLOAD — design tokens
+   Palette drawn from competition bumper plates on gym rubber:
+   red 25 kg / blue 20 kg / yellow 15 kg / green 10 kg.
+   Zone color is information: it encodes the DUP rep zone.
+   ============================================================ */
+:root {
+  --bg: #101315;          /* rubber-floor graphite */
+  --surface: #1a1f23;
+  --surface-2: #22282d;
+  --line: #2c343a;
+  --ink: #eff2f3;
+  --muted: #93a0a8;
+  --chalk: #f5f3ee;       /* CTA — chalk on dark */
+
+  --zone-heavy: #e24c3b;  /* 25 kg plate red   → 6-8 reps  */
+  --zone-mod:   #3b6fe0;  /* 20 kg plate blue  → 8-12 reps */
+  --zone-meta:  #efb61c;  /* 15 kg plate yellow→ 20-30 reps*/
+  --zone-sprint:#34a86b;  /* 10 kg plate green → power/RIR */
+
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius: 14px;
+  --pad: 16px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.45;
+  padding-bottom: 88px; /* room for rest bar */
+}
+.screen { max-width: 560px; margin: 0 auto; padding: var(--pad); }
+button { font: inherit; color: inherit; cursor: pointer; }
+
+/* ---------- wordmark ---------- */
+.wordmark {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.wordmark span { color: var(--muted); font-weight: 500; }
+.wordmark.sm { font-size: 26px; }
+.tagline { color: var(--muted); margin: 6px 0 28px; }
+.setup-head { padding-top: 28px; }
+
+/* ---------- form ---------- */
+.field { margin-bottom: 22px; }
+.field-label {
+  display: block;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.weight-input {
+  display: flex; align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 16px 4px 4px;
+}
+.weight-input input {
+  flex: 1; border: 0; background: none; color: var(--ink);
+  font-family: var(--display); font-weight: 600; font-size: 34px;
+  padding: 8px 12px; min-width: 0;
+}
+.weight-input input:focus { outline: none; }
+.weight-input:focus-within { border-color: var(--muted); }
+.weight-input .unit { color: var(--muted); font-family: var(--display); font-size: 20px; }
+
+.seg { display: flex; gap: 6px; }
+.seg button {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 4px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--muted);
+}
+.seg button small { display: block; font-family: var(--body); font-weight: 400; font-size: 12px; letter-spacing: 0; }
+.seg button.active { background: var(--surface-2); border-color: var(--chalk); color: var(--ink); }
+
+.mode-cards { display: grid; gap: 10px; }
+.mode-card {
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "plates name" "plates sub";
+  column-gap: 14px;
+  align-items: center;
+}
+.mode-card.active { border-color: var(--chalk); background: var(--surface-2); }
+.mode-plates { grid-area: plates; display: flex; }
+.mode-name { grid-area: name; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+.mode-sub { grid-area: sub; color: var(--muted); font-size: 13px; }
+
+/* ---------- the plate (signature element) ---------- */
+.plate {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: inline-block; position: relative; flex: none;
+  background: var(--surface-2);
+  border: 6px solid var(--zone-mod); /* rim = plate color */
+}
+.plate + .plate { margin-left: -8px; }
+.p-heavy  { border-color: var(--zone-heavy); }
+.p-mod    { border-color: var(--zone-mod); }
+.p-meta   { border-color: var(--zone-meta); }
+.p-sprint { border-color: var(--zone-sprint); }
+
+.cta {
+  width: 100%;
+  background: var(--chalk);
+  color: #14171a;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 16px;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.cta.slim { padding: 11px; font-size: 17px; width: auto; }
+.ghost {
+  background: none; border: 1px solid var(--line); border-radius: 10px;
+  color: var(--muted); padding: 8px 14px; font-size: 14px;
+}
+button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--zone-meta); outline-offset: 2px;
+}
+
+/* ---------- dashboard ---------- */
+.dash-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0 14px;
+  position: sticky; top: 0; background: var(--bg); z-index: 5;
+}
+.dash-meta { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; }
+
+.deload {
+  border: 1px solid var(--zone-meta);
+  border-radius: var(--radius);
+  padding: 16px; margin-bottom: 16px;
+}
+.deload strong { font-family: var(--display); font-size: 20px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--zone-meta); }
+.deload p { color: var(--muted); margin: 8px 0 12px; }
+
+.day-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: none; }
+.day-tabs::-webkit-scrollbar { display: none; }
+.day-tabs button {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 8px 16px; white-space: nowrap;
+  font-family: var(--display); font-weight: 600; font-size: 16px; letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.day-tabs button.active { background: var(--surface-2); color: var(--ink); border-color: var(--chalk); }
+
+/* ---------- exercise card ---------- */
+.workout-list { display: grid; gap: 12px; }
+.ex-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--zone, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+}
+.ex-top { display: flex; align-items: flex-start; gap: 12px; }
+.ex-top .plate { width: 34px; height: 34px; border-width: 9px; margin-top: 2px; }
+.ex-name { font-family: var(--display); font-weight: 700; font-size: 21px; line-height: 1.1; }
+.ex-muscle { color: var(--muted); font-size: 13px; text-transform: capitalize; }
+.ex-zone {
+  margin-left: auto; flex: none;
+  font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.1em;
+  color: var(--zone); text-transform: uppercase; padding-top: 4px;
+}
+.ex-rx {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin: 12px 0 10px;
+  font-family: var(--mono); font-size: 13px; color: var(--muted);
+}
+.ex-rx b { color: var(--ink); font-family: var(--display); font-size: 19px; font-weight: 700; letter-spacing: 0.02em; }
+.ex-rx .rx { display: flex; flex-direction: column; }
+.ex-rx .rx small { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+.technique {
+  display: inline-block; margin-bottom: 10px;
+  border: 1px dashed var(--zone-heavy); color: var(--zone-heavy);
+  border-radius: 8px; padding: 3px 10px; font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.intent { color: var(--muted); font-size: 12.5px; margin: 0 0 10px; }
+
+/* set logger: plates load onto the bar as sets are completed */
+.set-row { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
+.set-plates { display: flex; align-items: center; }
+.set-plates .plate { width: 18px; height: 18px; border-width: 4px; opacity: 0.25; }
+.set-plates .plate.done { opacity: 1; }
+.set-inputs { display: flex; gap: 6px; margin-left: auto; }
+.set-inputs input {
+  width: 64px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px;
+  color: var(--ink); font-family: var(--display); font-weight: 600; font-size: 17px;
+  text-align: center; padding: 7px 4px;
+}
+.log-btn {
+  background: var(--surface-2); border: 1px solid var(--chalk); border-radius: 8px;
+  font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: 0.06em;
+  padding: 7px 14px;
+}
+.ex-card.complete { opacity: 0.55; }
+.ex-card.complete .log-btn { border-color: var(--line); color: var(--muted); }
+.e1rm-note { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+
+/* ---------- nutrition ---------- */
+.nutrition {
+  margin-top: 18px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 4px 14px;
+}
+.nutrition summary {
+  font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: 0.05em;
+  text-transform: uppercase; padding: 10px 0; cursor: pointer; color: var(--muted);
+}
+.nut-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding-bottom: 8px; }
+.nut-grid .rx b { font-family: var(--display); font-size: 24px; }
+.nut-grid .rx small { display: block; color: var(--muted); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.nut-note { color: var(--muted); font-size: 13px; padding-bottom: 12px; }
+
+.dash-actions { margin: 18px 0 8px; text-align: center; }
+
+/* ---------- rest timer ---------- */
+.rest-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; height: 72px;
+  background: var(--surface-2); border-top: 1px solid var(--line);
+  overflow: hidden; z-index: 10;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.rest-fill {
+  position: absolute; inset: 0; transform-origin: left;
+  background: var(--zone, var(--zone-mod)); opacity: 0.22;
+}
+.rest-content {
+  position: relative; height: 72px; max-width: 560px; margin: 0 auto;
+  display: flex; align-items: center; gap: 14px; padding: 0 var(--pad);
+}
+.rest-label { font-family: var(--display); font-weight: 700; letter-spacing: 0.18em; color: var(--muted); font-size: 13px; }
+.rest-time { font-family: var(--display); font-weight: 700; font-size: 38px; font-variant-numeric: tabular-nums; }
+.rest-next { color: var(--muted); font-size: 12.5px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#rest-skip { background: none; border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+@media (min-width: 640px) {
+  .wordmark { font-size: 56px; }
+  .mode-cards { grid-template-columns: 1fr 1fr; }
+}
