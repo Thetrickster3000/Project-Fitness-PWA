@@ -19,7 +19,8 @@
 const HYPERTROPHY = {
   FREQ_PER_MUSCLE: { min: 2, max: 3 },          // sessions per muscle per week
   WEEKLY_SETS:     { min: 12, default: 16, max: 28 },
-  SETS_PER_EXERCISE: { min: 3, max: 6 },
+  SETS_PER_EXERCISE: { min: 3, max: 4 },         // consolidated: fewer exercises, solid sets each
+  DAY_EXERCISE_CAP: { min: 4, max: 6 },          // hard ceiling — never dump every muscle into one session
   CUT_VOLUME_MULTIPLIER: 0.75,                   // -25% (middle of the 20–30% band)
   REST_SEC: 60,                                  // metabolic-stress default
   TEMPO: "2-0-1-0",                              // controlled 2s eccentric
@@ -62,6 +63,12 @@ const MUSCLES_UPPER = ["chest", "front_delts", "side_delts", "rear_delts", "lats
 const MUSCLES_LOWER = ["quadriceps", "hamstrings", "glutes", "adductors", "calves"];
 const MUSCLES_PUSH  = ["chest", "front_delts", "side_delts", "triceps"];
 const MUSCLES_PULL  = ["lats", "upper_back", "rear_delts", "traps", "biceps"];
+
+// Large, multi-joint muscle groups that anchor a session — always claim a slot first.
+// Small/isolation groups are accessories: they get folded into leftover slots via
+// indirect (secondary-muscle) credit, or deferred to another day in the split.
+const PRIMARY_MUSCLES = new Set(["quadriceps", "hamstrings", "glutes", "chest", "lats", "upper_back", "front_delts"]);
+const ACCESSORY_MUSCLES = new Set(["side_delts", "rear_delts", "traps", "biceps", "triceps", "calves", "adductors", "forearms", "abs", "obliques", "hip_flexors"]);
 
 // ---------------------------------------------------------------------------
 // 2. SPLIT SELECTION (hypertrophy) — guarantees 2–3x weekly frequency/muscle
@@ -159,11 +166,26 @@ function buildHypertrophyWeek(user, exerciseDB, history) {
   // with the indirect volume those compounds already provide.
   const MUSCLE_PRIORITY = ["quadriceps", "hamstrings", "glutes", "chest", "lats", "upper_back", "front_delts", "adductors", "calves", "side_delts", "rear_delts", "traps", "triceps", "biceps"];
 
+  // Primary muscles always outrank accessories, regardless of split-day ordering.
+  // Ties within a tier fall back to the general size/impact priority above.
+  const muscleRank = m => (PRIMARY_MUSCLES.has(m) ? 0 : 1000) + MUSCLE_PRIORITY.indexOf(m);
+
   for (const session of daySessions) {
     const orderedMuscles = Object.entries(session.muscleSetBudget)
-      .sort((a, b) => MUSCLE_PRIORITY.indexOf(a[0]) - MUSCLE_PRIORITY.indexOf(b[0]));
+      .sort((a, b) => muscleRank(a[0]) - muscleRank(b[0]));
+
+    // The full list of muscles this day is supposed to touch — used to score
+    // exercises that cover more than one of today's targets at once (consolidation).
+    const dayMuscleSet = new Set(orderedMuscles.map(([m]) => m));
 
     for (const [muscle, rawBudget] of orderedMuscles) {
+      // HARD CEILING: once the session hits its max exercise count, stop.
+      // Remaining (always lower-priority/accessory) muscles are dropped for
+      // today — they still get their weekly volume on their other 2-3 sessions,
+      // or indirectly whenever a compound already lists them as secondary.
+      const slotsLeft = HYPERTROPHY.DAY_EXERCISE_CAP.max - session.exercises.length;
+      if (slotsLeft <= 0) break;
+
       // Indirect-volume credit: each set of an already-slotted exercise that lists
       // this muscle as secondary counts as half a direct set.
       const indirect = session.exercises.reduce((acc, e) =>
@@ -174,12 +196,16 @@ function buildHypertrophyWeek(user, exerciseDB, history) {
       const nth = (muscleSessionCounter[muscle] = (muscleSessionCounter[muscle] ?? -1) + 1);
       const zone = HYPERTROPHY.DUP_ZONES[(nth + weekOffset) % HYPERTROPHY.DUP_ZONES.length];
 
-      // 3–6 sets per exercise → derive how many exercises this muscle needs today.
-      const exercisesNeeded = Math.max(1, Math.ceil(setBudget / HYPERTROPHY.SETS_PER_EXERCISE.max));
+      // 3–4 sets per exercise → derive how many exercises this muscle needs today,
+      // but never request more than the slots actually remaining in the session.
+      const idealExercises = Math.max(1, Math.ceil(setBudget / HYPERTROPHY.SETS_PER_EXERCISE.max));
+      const exercisesNeeded = Math.min(idealExercises, slotsLeft);
+      // Folding the same set budget into fewer exercises means each one carries
+      // more sets — clamp with a slightly wider ceiling so volume isn't silently lost.
       const setsPerExercise = clamp(
         Math.round(setBudget / exercisesNeeded),
         HYPERTROPHY.SETS_PER_EXERCISE.min,
-        HYPERTROPHY.SETS_PER_EXERCISE.max
+        HYPERTROPHY.SETS_PER_EXERCISE.max + 1
       );
 
       const picks = selectHypertrophyExercises({
@@ -187,6 +213,10 @@ function buildHypertrophyWeek(user, exerciseDB, history) {
         // DUP exercise rotation: exclude what was used for this muscle last week.
         excludeIds: history.lastWeekExerciseIdsByMuscle?.[muscle] ?? [],
         alreadyPickedToday: session.exercises.map(e => e.exerciseId),
+        // Smart consolidation: favor compounds whose secondary muscles also
+        // belong to today's target list, so one exercise pre-credits another
+        // muscle's budget instead of needing a separate accessory slot.
+        otherDayMuscles: dayMuscleSet,
       });
 
       for (const ex of picks) {
@@ -208,14 +238,62 @@ function buildHypertrophyWeek(user, exerciseDB, history) {
         session.exercises.push(prescription);
       }
     }
-    // Order: high axial/CNS cost compounds first, stable machine work last.
+  }
+
+  // --- 4d. Frequency backfill ------------------------------------------------
+  // The cap can drop a muscle from one of its assigned days entirely. Before
+  // finalizing, top up any muscle that fell below its 2x/week minimum by
+  // slotting one exercise into another of its assigned days that still has
+  // spare slots under the cap — keeping weekly frequency intact without ever
+  // breaking the per-day ceiling.
+  for (const muscle of allMuscles) {
+    const assignedDays = daySessions.filter(d => muscle in d.muscleSetBudget);
+    if (!assignedDays.length) continue;
+
+    const hitDays = assignedDays.filter(d => d.exercises.some(e => e.muscle === muscle));
+    if (hitDays.length >= HYPERTROPHY.FREQ_PER_MUSCLE.min) continue;
+
+    for (const day of assignedDays) {
+      if (hitDays.includes(day)) continue;
+      if (day.exercises.length >= HYPERTROPHY.DAY_EXERCISE_CAP.max) continue;
+
+      const zone = HYPERTROPHY.DUP_ZONES[(muscleSessionCounter[muscle] ?? 0) % HYPERTROPHY.DUP_ZONES.length];
+      muscleSessionCounter[muscle] = (muscleSessionCounter[muscle] ?? 0) + 1;
+
+      const [pick] = selectHypertrophyExercises({
+        exerciseDB, muscle, zone, count: 1,
+        excludeIds: history.lastWeekExerciseIdsByMuscle?.[muscle] ?? [],
+        alreadyPickedToday: day.exercises.map(e => e.exerciseId),
+        otherDayMuscles: new Set(Object.keys(day.muscleSetBudget)),
+      });
+      if (!pick) continue;
+
+      day.exercises.push({
+        exerciseId: pick.id,
+        name: pick.name,
+        muscle,
+        sets: HYPERTROPHY.SETS_PER_EXERCISE.min,
+        repRange: zone.repRange,
+        pctLoad: zone.pctLoad,
+        restSec: zone.name === "moderate" ? HYPERTROPHY.REST_SEC : zone.restSec,
+        tempo: pick.programming.defaultTempo || HYPERTROPHY.TEMPO,
+        intent: "volitional muscular failure (frequency top-up)",
+        targetRIR: zone.targetRIR,
+      });
+      hitDays.push(day);
+      if (hitDays.length >= HYPERTROPHY.FREQ_PER_MUSCLE.min) break;
+    }
+  }
+
+  // Final ordering: high axial/CNS cost compounds first, stable machine work last.
+  for (const session of daySessions) {
     session.exercises.sort((a, b) => exerciseCost(exerciseDB, b.exerciseId) - exerciseCost(exerciseDB, a.exerciseId));
   }
 
   return daySessions;
 }
 
-function selectHypertrophyExercises({ exerciseDB, muscle, zone, count, excludeIds, alreadyPickedToday }) {
+function selectHypertrophyExercises({ exerciseDB, muscle, zone, count, excludeIds, alreadyPickedToday, otherDayMuscles }) {
   return exerciseDB
     .filter(ex =>
       ex.muscles.primary.includes(muscle) &&
@@ -223,11 +301,17 @@ function selectHypertrophyExercises({ exerciseDB, muscle, zone, count, excludeId
       !excludeIds.includes(ex.id) &&
       !alreadyPickedToday.includes(ex.id)
     )
-    .sort((a, b) =>
-      // Rank purely on hypertrophy suitability; tie-break on stretched-position loading.
-      (b.suitability.hypertrophy - a.suitability.hypertrophy) ||
-      (Number(b.movement.loadedAtLongMuscleLength) - Number(a.movement.loadedAtLongMuscleLength))
-    )
+    .sort((a, b) => {
+      // Consolidation bonus: exercises whose secondary muscles overlap with
+      // other muscles the day still needs to hit reduce how many separate
+      // accessory slots we'll need later.
+      const overlapA = (a.muscles.secondary ?? []).filter(m => otherDayMuscles?.has(m)).length;
+      const overlapB = (b.muscles.secondary ?? []).filter(m => otherDayMuscles?.has(m)).length;
+      return (b.suitability.hypertrophy - a.suitability.hypertrophy) ||
+        (overlapB - overlapA) ||
+        // Tie-break on stretched-position loading.
+        (Number(b.movement.loadedAtLongMuscleLength) - Number(a.movement.loadedAtLongMuscleLength));
+    })
     .slice(0, count);
 }
 

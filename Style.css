@@ -177,6 +177,10 @@ button:focus-visible, input:focus-visible, summary:focus-visible {
 
 /* ---------- exercise card ---------- */
 .workout-list { display: grid; gap: 12px; }
+.day-summary {
+  margin: 0 0 -2px; color: var(--muted); font-size: 13px;
+  font-family: var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+}
 .ex-card {
   background: var(--surface);
   border: 1px solid var(--line);

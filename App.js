@@ -199,6 +199,12 @@ function renderDay() {
     return;
   }
 
+  const totalSets = day.exercises.reduce((a, e) => a + e.sets, 0);
+  const summary = document.createElement("p");
+  summary.className = "day-summary";
+  summary.textContent = `${day.exercises.length} exercises · ${totalSets} working sets`;
+  list.appendChild(summary);
+
   for (const rx of day.exercises) {
     const zone = zoneOf(rx, profile.mode);
     const doneKey = [isoWeek(), day.dayIndex, rx.exerciseId].join(":");
