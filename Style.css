@@ -208,6 +208,8 @@ button:focus-visible, input:focus-visible, summary:focus-visible {
   text-transform: uppercase; letter-spacing: 0.08em;
 }
 .intent { color: var(--muted); font-size: 12.5px; margin: 0 0 10px; }
+.last-time { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+.last-time b { color: var(--ink); font-family: var(--display); font-weight: 700; letter-spacing: 0.02em; }
 
 /* set logger: plates load onto the bar as sets are completed */
 .set-row { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }

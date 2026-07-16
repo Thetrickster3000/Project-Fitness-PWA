@@ -205,6 +205,7 @@ function renderDay() {
     const done = store.get(K.DONE, {})[doneKey] ?? 0;
     const loadTxt = rx.pctLoad ? Math.round(rx.pctLoad[0] * 100) + "–" + Math.round(rx.pctLoad[1] * 100) + "%" : "BW / ballistic";
     const best = latestE1RM(rx.exerciseId);
+    const last = lastPerformance(rx.exerciseId);
 
     const card = document.createElement("article");
     card.className = "ex-card" + (done >= rx.sets ? " complete" : "");
@@ -227,12 +228,13 @@ function renderDay() {
         ${rx.targetRIR != null ? `<span class="rx"><b>${rx.targetRIR === 0 ? "0 (failure)" : rx.targetRIR}</b><small>RIR</small></span>` : ""}
       </div>
       <p class="intent">${esc(rx.intent ?? "")}</p>
+      ${last ? `<p class="last-time">Last time: <b>${last.kg}kg × ${last.reps}</b></p>` : ""}
       <div class="set-row">
         <span class="set-plates">${Array.from({ length: rx.sets }, (_, i) =>
           `<i class="plate ${zone.cls}${i < done ? " done" : ""}"></i>`).join("")}</span>
         <span class="set-inputs">
-          <input type="number" inputmode="decimal" placeholder="kg" aria-label="Weight in kilograms" step="0.5" min="0" />
-          <input type="number" inputmode="numeric" placeholder="reps" aria-label="Repetitions" min="1" max="50" />
+          <input type="number" inputmode="decimal" placeholder="kg" aria-label="Weight in kilograms" step="0.5" min="0" value="${last ? last.kg : ""}" />
+          <input type="number" inputmode="numeric" placeholder="reps" aria-label="Repetitions" min="1" max="50" value="${last ? last.reps : ""}" />
         </span>
         <button class="log-btn" type="button">Log set</button>
       </div>
@@ -254,6 +256,15 @@ function renderDay() {
 function latestE1RM(exerciseId) {
   const log = store.get(K.HISTORY, {})[exerciseId];
   return log?.length ? log[log.length - 1].bestE1RM : null;
+}
+
+/** Most recent logged set for this exercise, across any previous session. */
+function lastPerformance(exerciseId) {
+  const logs = store.get(K.SET_LOGS, []);
+  for (let i = logs.length - 1; i >= 0; i--) {
+    if (logs[i].exerciseId === exerciseId) return logs[i];
+  }
+  return null;
 }
 
 function logSet(rx, day, doneKey, kg, reps) {
