@@ -87,7 +87,14 @@
       <button id="new-meso" class="cta slim" type="button">Start next mesocycle</button>
     </div>
 
-    <nav class="day-tabs" id="day-tabs" aria-label="Training days"></nav>
+    <div class="week-head">
+      <span class="week-title">This week</span>
+      <button id="edit-schedule" class="ghost" type="button">Move days</button>
+    </div>
+    <nav class="week-cal" id="week-cal" aria-label="Weekly schedule"></nav>
+    <p class="cal-hint" id="cal-hint" hidden>Tap a workout, then tap the day you want it on (days swap).</p>
+    <div id="cal-warnings" class="cal-warnings"></div>
+    <p class="cal-guidance" id="cal-guidance"></p>
 
     <div id="workout-list" class="workout-list"></div>
 

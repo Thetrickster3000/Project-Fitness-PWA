@@ -294,25 +294,53 @@ function buildHypertrophyWeek(user, exerciseDB, history) {
 }
 
 function selectHypertrophyExercises({ exerciseDB, muscle, zone, count, excludeIds, alreadyPickedToday, otherDayMuscles }) {
-  return exerciseDB
-    .filter(ex =>
-      ex.muscles.primary.includes(muscle) &&
-      ex.programming.repRangeCompatibility.includes(zone.repRange) &&
-      !excludeIds.includes(ex.id) &&
-      !alreadyPickedToday.includes(ex.id)
-    )
-    .sort((a, b) => {
-      // Consolidation bonus: exercises whose secondary muscles overlap with
-      // other muscles the day still needs to hit reduce how many separate
-      // accessory slots we'll need later.
-      const overlapA = (a.muscles.secondary ?? []).filter(m => otherDayMuscles?.has(m)).length;
-      const overlapB = (b.muscles.secondary ?? []).filter(m => otherDayMuscles?.has(m)).length;
-      return (b.suitability.hypertrophy - a.suitability.hypertrophy) ||
-        (overlapB - overlapA) ||
-        // Tie-break on stretched-position loading.
-        (Number(b.movement.loadedAtLongMuscleLength) - Number(a.movement.loadedAtLongMuscleLength));
-    })
-    .slice(0, count);
+  const candidates = exerciseDB.filter(ex =>
+    ex.muscles.primary.includes(muscle) &&
+    ex.programming.repRangeCompatibility.includes(zone.repRange) &&
+    // Weekly DUP exercise rotation applies to ISOLATION work only. Core
+    // compounds persist across weeks: progressive overload and the 3-week
+    // plateau detector both require a stable lift to accumulate e1RM history.
+    !(excludeIds.includes(ex.id) && ex.movement.mechanics === "isolation") &&
+    !alreadyPickedToday.includes(ex.id)
+  );
+
+  const score = ex => {
+    // Consolidation bonus: exercises whose secondary muscles overlap with
+    // other muscles the day still needs to hit reduce how many separate
+    // accessory slots we'll need later.
+    const overlap = (ex.muscles.secondary ?? []).filter(m => otherDayMuscles?.has(m)).length;
+    return ex.suitability.hypertrophy * 10 + overlap * 2 + Number(ex.movement.loadedAtLongMuscleLength);
+  };
+
+  // Greedy selection: pick the best exercise first, then require each further
+  // pick to hit this muscle from a DIFFERENT angle (movement pattern or
+  // resistance profile) than what's already chosen. Two "Pendulum Squat +
+  // Hack Squat"-style picks (same pattern, same joint angle) are redundant
+  // stimulus, not complementary coverage — this prevents that. Equipment
+  // class is a fallback diversity axis for muscles (e.g. upper back) whose
+  // exercise pool is dominated by a single movement pattern.
+  const picked = [];
+  const remaining = [...candidates];
+
+  while (picked.length < count && remaining.length) {
+    const usedPatterns = new Set(picked.map(p => p.movement.pattern));
+    const usedProfiles = new Set(picked.map(p => p.movement.resistanceProfile));
+    const usedEquip = new Set(picked.map(p => p.equipmentClass));
+
+    const diversePool = remaining.filter(ex =>
+      !usedPatterns.has(ex.movement.pattern) ||
+      !usedProfiles.has(ex.movement.resistanceProfile) ||
+      !usedEquip.has(ex.equipmentClass)
+    );
+    const pool = (picked.length === 0 || diversePool.length === 0) ? remaining : diversePool;
+
+    pool.sort((a, b) => score(b) - score(a));
+    const next = pool[0];
+    picked.push(next);
+    remaining.splice(remaining.indexOf(next), 1);
+  }
+
+  return picked;
 }
 
 /** Stalled for PLATEAU_WINDOW_WEEKS → deterministically rotate through techniques. */
@@ -430,6 +458,44 @@ function buildNutritionTargets(user) {
 // ---------------------------------------------------------------------------
 
 function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
+
+// ---------------------------------------------------------------------------
+// 8. WEEKLY SCHEDULING — rest-day placement science per frequency
+// ---------------------------------------------------------------------------
+// assignment: array of 7 entries (index 0 = Monday … 6 = Sunday);
+// each entry is a session index into plan.week, or null for a rest day.
+
+const SCHEDULE_TEMPLATES = {
+  hypertrophy: {
+    2: { days: [0, 3],             order: [0, 1],          guidance: "Full body 2×/week: keep 2–3 rest days between sessions (Mon/Thu) so every muscle gets ~72h recovery between its two weekly hits." },
+    3: { days: [0, 2, 4],          order: [0, 1, 2],       guidance: "Full body every other day (Mon/Wed/Fri): 48h between sessions is sufficient because per-session volume per muscle is moderate." },
+    4: { days: [0, 1, 3, 4],       order: [0, 1, 2, 3],    guidance: "Upper/Lower 2-on-1-off (Mon/Tue, rest Wed, Thu/Fri): the same muscles never train on consecutive days, and the weekend stays free for recovery." },
+    5: { days: [0, 1, 2, 4, 5],    order: [0, 1, 2, 3, 4], guidance: "Hybrid split: heaviest sessions early in the week, rest Thursday before the Push/Pull/Legs block, full rest Sunday." },
+    6: { days: [0, 1, 2, 3, 4, 5], order: [0, 1, 2, 3, 4, 5], guidance: "PPL ×2 with one full rest day (Sun): each muscle still gets ~72h between its two weekly sessions because the split never repeats a muscle on consecutive days." },
+  },
+  sprint: {
+    2: { days: [0, 3],             order: [0, 1],          guidance: "Two CNS-heavy sessions need 48–72h between them (Mon/Thu). More rest here is a feature, not laziness — RFD adaptations consolidate during recovery." },
+    3: { days: [0, 2, 5],          order: [0, 2, 1],       guidance: "High/low alternation (Mon/Wed/Sat): never stack two high-CNS days back to back. The eccentric/unilateral day sits between the max-strength and plyometric days." },
+    4: { days: [0, 1, 3, 5],       order: [0, 2, 1, 3],    guidance: "High/low wave (Mon/Tue/Thu/Sat): Max Strength → low-CNS Eccentric/Unilateral → Plyometrics → Upper+Reactive. Heavy CNS days are always separated by 48h+." },
+  },
+  deload: {
+    2: { days: [0, 3],             order: [0, 1],          guidance: "Deload: two easy sessions, spread evenly. The point is staying in motion while fatigue dissipates." },
+    3: { days: [0, 2, 4],          order: [0, 1, 2],       guidance: "Deload: three easy sessions on alternating days at ≤50% volume." },
+  },
+};
+
+/**
+ * Returns { assignment: (sessionIndex|null)[7], guidance } for a plan.
+ * @param {string} mode 'hypertrophy' | 'sprint' | 'deload'
+ * @param {number} sessionCount number of sessions in plan.week
+ */
+export function defaultSchedule(mode, sessionCount) {
+  const table = SCHEDULE_TEMPLATES[mode] ?? SCHEDULE_TEMPLATES.hypertrophy;
+  const tpl = table[sessionCount] ?? table[Math.max(...Object.keys(table).map(Number).filter(k => k <= sessionCount))] ?? Object.values(table)[0];
+  const assignment = Array(7).fill(null);
+  tpl.days.forEach((weekday, i) => { assignment[weekday] = tpl.order[i] ?? i; });
+  return { assignment, guidance: tpl.guidance };
+}
 
 function exerciseCost(exerciseDB, id) {
   const ex = exerciseDB.find(e => e.id === id);

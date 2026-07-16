@@ -2,7 +2,7 @@
  * Wires the DOM to the rule-based engine (plan-generator.js),
  * persists everything to localStorage, and runs the rest timer.
  */
-import { generateWeeklyPlan } from "./plan-generator.js";
+import { generateWeeklyPlan, defaultSchedule } from "./plan-generator.js";
 
 // ---------------------------------------------------------------------------
 // Storage
@@ -19,9 +19,10 @@ const K = {
   MESO_START: "ov_meso_start",    // ISO date the current mesocycle began
   PLAN: "ov_plan",                // { weekKey, plan }
   HISTORY: "ov_history",          // { [exerciseId]: [{week, bestE1RM}] }
-  LAST_ROTATION: "ov_rotation",   // { [muscle]: [exerciseIds used last generated week] }
+  LAST_ROTATION: "ov_rotation",   // { current: {weekKey, byMuscle}, previous: {weekKey, byMuscle} }
   SET_LOGS: "ov_setlogs",         // flat array of every logged set
   DONE: "ov_done",                // { [weekKey:day:exerciseId]: setsCompleted }
+  SCHEDULE: "ov_schedule",        // { key: mode:sessionCount, assignment: (sessionIdx|null)[7] }
 };
 
 // ---------------------------------------------------------------------------
@@ -72,6 +73,8 @@ async function boot() {
   const saved = store.get(K.PLAN);
   if (saved && saved.weekKey === isoWeek()) {
     currentPlan = saved.plan;
+    ensureSchedule();
+    activeDay = todaysSessionOrNext();
     showDashboard();
   } else {
     regenerate(); // a new calendar week began → fresh microcycle, DUP rotates
@@ -129,30 +132,160 @@ $("#setup-form").addEventListener("submit", e => {
 // ---------------------------------------------------------------------------
 function regenerate() {
   const profile = store.get(K.PROFILE);
+  const wk = isoWeek();
+
+  // Week-aware rotation memory: exclusions must come from LAST week's plan.
+  // Regenerating within the same week reuses the same exclusions instead of
+  // treating the plan we just made as "last week" (which churned everything).
+  const rot = store.get(K.LAST_ROTATION, { current: null, previous: null });
+  const exclusionSource = rot.current?.weekKey === wk ? rot.previous : rot.current;
+
   const history = {
     ...store.get(K.HISTORY, {}),
-    lastWeekExerciseIdsByMuscle: store.get(K.LAST_ROTATION, {}),
+    lastWeekExerciseIdsByMuscle: exclusionSource?.byMuscle ?? {},
   };
   currentPlan = generateWeeklyPlan(
     { ...profile, weeksIntoMeso: weeksIntoMeso() },
     EXDB,
     history
   );
-  store.set(K.PLAN, { weekKey: isoWeek(), plan: currentPlan });
+  store.set(K.PLAN, { weekKey: wk, plan: currentPlan });
 
   // Remember what was programmed per muscle → next week's DUP exercise rotation.
   if (currentPlan.type === "training") {
-    const rotation = {};
+    const byMuscle = {};
     for (const day of currentPlan.week) {
       for (const ex of day.exercises) {
         if (!ex.muscle) continue;
-        (rotation[ex.muscle] ??= []).includes(ex.exerciseId) || rotation[ex.muscle].push(ex.exerciseId);
+        (byMuscle[ex.muscle] ??= []).includes(ex.exerciseId) || byMuscle[ex.muscle].push(ex.exerciseId);
       }
     }
-    store.set(K.LAST_ROTATION, rotation);
+    store.set(K.LAST_ROTATION, {
+      current: { weekKey: wk, byMuscle },
+      previous: rot.current?.weekKey === wk ? rot.previous : rot.current,
+    });
   }
-  activeDay = 0;
+  ensureSchedule();
+  activeDay = todaysSessionOrNext();
   showDashboard();
+}
+
+// ---------------------------------------------------------------------------
+// Weekly schedule (calendar)
+// ---------------------------------------------------------------------------
+const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let scheduleEditing = false;
+let scheduleSelectedCell = null;
+
+function scheduleMode() {
+  return currentPlan.type === "deload" ? "deload" : store.get(K.PROFILE).mode;
+}
+
+/** Load the saved schedule if it matches the current plan shape, else reset to the default. */
+function ensureSchedule() {
+  const key = scheduleMode() + ":" + currentPlan.week.length;
+  const saved = store.get(K.SCHEDULE);
+  if (saved?.key === key) return saved.assignment;
+  const { assignment } = defaultSchedule(scheduleMode(), currentPlan.week.length);
+  store.set(K.SCHEDULE, { key, assignment });
+  return assignment;
+}
+
+function getAssignment() { return store.get(K.SCHEDULE).assignment; }
+
+function todaysSessionOrNext() {
+  const assignment = ensureSchedule();
+  const today = (new Date().getDay() + 6) % 7; // 0 = Monday
+  for (let offset = 0; offset < 7; offset++) {
+    const s = assignment[(today + offset) % 7];
+    if (s != null && currentPlan.week[s]) return s;
+  }
+  return 0;
+}
+
+function renderCalendar() {
+  const cal = $("#week-cal");
+  cal.innerHTML = "";
+  const assignment = getAssignment();
+  const today = (new Date().getDay() + 6) % 7;
+  const profile = store.get(K.PROFILE);
+
+  assignment.forEach((sessionIdx, weekday) => {
+    const cell = document.createElement("button");
+    cell.type = "button";
+    const session = sessionIdx != null ? currentPlan.week[sessionIdx] : null;
+    cell.className = "cal-cell"
+      + (session ? " training" : " rest")
+      + (weekday === today ? " today" : "")
+      + (session && sessionIdx === activeDay && !scheduleEditing ? " active" : "")
+      + (scheduleEditing && scheduleSelectedCell === weekday ? " selected" : "");
+    cell.innerHTML = `
+      <span class="cal-dow">${WEEKDAYS[weekday]}</span>
+      <span class="cal-label">${session ? esc(shortLabel(session.label)) : "Rest"}</span>`;
+    cell.addEventListener("click", () => onCalendarTap(weekday));
+    cal.appendChild(cell);
+  });
+
+  const { guidance } = defaultSchedule(scheduleMode(), currentPlan.week.length);
+  $("#cal-guidance").textContent = guidance;
+  $("#cal-hint").hidden = !scheduleEditing;
+  $("#edit-schedule").textContent = scheduleEditing ? "Done" : "Move days";
+  renderScheduleWarnings(assignment, profile.mode);
+}
+
+function shortLabel(label) {
+  return label.replace("Max Strength", "Max Str.").replace(" + Eccentric Durability", "/Ecc").replace(" / Plyometrics", "/Plyo").replace(" + Reactive", "");
+}
+
+function onCalendarTap(weekday) {
+  const assignment = getAssignment();
+  if (!scheduleEditing) {
+    if (assignment[weekday] != null) { activeDay = assignment[weekday]; renderCalendar(); renderDay(); }
+    return;
+  }
+  // Edit mode: first tap selects a workout day, second tap swaps it with the target day.
+  if (scheduleSelectedCell == null) {
+    if (assignment[weekday] != null) { scheduleSelectedCell = weekday; renderCalendar(); }
+    return;
+  }
+  [assignment[scheduleSelectedCell], assignment[weekday]] = [assignment[weekday], assignment[scheduleSelectedCell]];
+  store.set(K.SCHEDULE, { ...store.get(K.SCHEDULE), assignment });
+  scheduleSelectedCell = null;
+  renderCalendar();
+}
+
+/** Soft recovery warnings — never blocks the user's choice, just informs it. */
+function renderScheduleWarnings(assignment, mode) {
+  const warnings = [];
+  const labels = assignment.map(s => (s != null ? currentPlan.week[s]?.label : null));
+
+  // Overlapping muscle groups on consecutive days (<48h recovery).
+  const OVERLAP = { UPPER: ["UPPER", "PUSH", "PULL"], LOWER: ["LOWER", "LEGS"], LEGS: ["LEGS", "LOWER"], PUSH: ["PUSH", "UPPER"], PULL: ["PULL", "UPPER"], FULL: ["FULL", "UPPER", "LOWER", "PUSH", "PULL", "LEGS"] };
+  for (let d = 0; d < 6; d++) {
+    const a = labels[d], b = labels[d + 1];
+    if (a && b && (OVERLAP[a]?.includes(b) || a === b)) {
+      warnings.push(`${WEEKDAYS[d]}→${WEEKDAYS[d + 1]}: ${a} and ${b} overlap — the same muscles get <48h recovery.`);
+    }
+  }
+
+  // Sprint: two high-CNS sessions back to back.
+  if (mode === "sprint") {
+    const HIGH_CNS = ["Max Strength (Lower)", "Power / Plyometrics"];
+    for (let d = 0; d < 6; d++) {
+      const a = assignment[d] != null ? currentPlan.week[assignment[d]]?.label : null;
+      const b = assignment[d + 1] != null ? currentPlan.week[assignment[d + 1]]?.label : null;
+      if (HIGH_CNS.includes(a) && HIGH_CNS.includes(b)) {
+        warnings.push(`${WEEKDAYS[d]}→${WEEKDAYS[d + 1]}: two high-CNS sessions back to back — give the nervous system 48h.`);
+      }
+    }
+  }
+
+  // Long unbroken training runs.
+  let run = 0, maxRun = 0;
+  for (const s of assignment) { run = s != null ? run + 1 : 0; maxRun = Math.max(maxRun, run); }
+  if (maxRun >= 5) warnings.push(`${maxRun} training days in a row — consider spacing in a rest day.`);
+
+  $("#cal-warnings").innerHTML = warnings.map(w => `<p class="cal-warn">⚠ ${esc(w)}</p>`).join("");
 }
 
 // ---------------------------------------------------------------------------
@@ -171,21 +304,10 @@ function showDashboard() {
   $("#deload-banner").hidden = !isDeload;
   if (isDeload) $("#deload-note").textContent = currentPlan.note;
 
-  renderTabs();
+  ensureSchedule();
+  renderCalendar();
   renderDay();
   renderNutrition();
-}
-
-function renderTabs() {
-  const tabs = $("#day-tabs");
-  tabs.innerHTML = "";
-  currentPlan.week.forEach((day, i) => {
-    const b = document.createElement("button");
-    b.textContent = "Day " + day.dayIndex + " · " + day.label;
-    b.classList.toggle("active", i === activeDay);
-    b.addEventListener("click", () => { activeDay = i; renderTabs(); renderDay(); });
-    tabs.appendChild(b);
-  });
 }
 
 function renderDay() {
@@ -202,7 +324,7 @@ function renderDay() {
   const totalSets = day.exercises.reduce((a, e) => a + e.sets, 0);
   const summary = document.createElement("p");
   summary.className = "day-summary";
-  summary.textContent = `${day.exercises.length} exercises · ${totalSets} working sets`;
+  summary.textContent = `${day.label} — ${day.exercises.length} exercises · ${totalSets} working sets`;
   list.appendChild(summary);
 
   for (const rx of day.exercises) {
@@ -337,6 +459,11 @@ $("#rest-skip").addEventListener("click", () => { clearInterval(restTimer); $("#
 // ---------------------------------------------------------------------------
 $("#edit-profile").addEventListener("click", showSetup);
 $("#regen-week").addEventListener("click", regenerate);
+$("#edit-schedule").addEventListener("click", () => {
+  scheduleEditing = !scheduleEditing;
+  scheduleSelectedCell = null;
+  renderCalendar();
+});
 $("#new-meso").addEventListener("click", () => {
   store.set(K.MESO_START, new Date().toISOString());
   regenerate();

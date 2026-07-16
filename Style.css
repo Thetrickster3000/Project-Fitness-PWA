@@ -165,15 +165,35 @@ button:focus-visible, input:focus-visible, summary:focus-visible {
 .deload strong { font-family: var(--display); font-size: 20px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--zone-meta); }
 .deload p { color: var(--muted); margin: 8px 0 12px; }
 
-.day-tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 12px; scrollbar-width: none; }
-.day-tabs::-webkit-scrollbar { display: none; }
-.day-tabs button {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
-  padding: 8px 16px; white-space: nowrap;
-  font-family: var(--display); font-weight: 600; font-size: 16px; letter-spacing: 0.05em;
-  color: var(--muted);
+.week-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.week-title {
+  font-family: var(--display); font-weight: 600; font-size: 15px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
 }
-.day-tabs button.active { background: var(--surface-2); color: var(--ink); border-color: var(--chalk); }
+.week-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-cell {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px 2px; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  min-height: 58px;
+}
+.cal-cell .cal-dow {
+  font-family: var(--display); font-weight: 600; font-size: 12px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.cal-cell .cal-label { font-size: 10.5px; line-height: 1.15; text-align: center; color: var(--muted); }
+.cal-cell.training .cal-label { color: var(--ink); font-weight: 600; }
+.cal-cell.training { border-color: var(--line); background: var(--surface-2); }
+.cal-cell.rest { opacity: 0.55; }
+.cal-cell.today .cal-dow { color: var(--zone-meta); }
+.cal-cell.active { border-color: var(--chalk); }
+.cal-cell.selected { border-color: var(--zone-meta); box-shadow: 0 0 0 1px var(--zone-meta); }
+.cal-hint { color: var(--zone-meta); font-size: 12.5px; margin: 8px 0 0; }
+.cal-warnings { margin-top: 8px; }
+.cal-warn { color: var(--zone-heavy); font-size: 12.5px; margin: 4px 0; }
+.cal-guidance { color: var(--muted); font-size: 12.5px; margin: 8px 0 14px; }
+
+/* legacy day-tabs kept for safety if referenced */
+.day-tabs { display: none; }
 
 /* ---------- exercise card ---------- */
 .workout-list { display: grid; gap: 12px; }
